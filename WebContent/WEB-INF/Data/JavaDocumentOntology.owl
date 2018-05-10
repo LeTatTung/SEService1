@@ -1926,16 +1926,16 @@ gnature can throw an exception</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
 
-    <!-- http://hut.edu.vn/ontology/sourcecode#javadocTopic -->
+    <!-- http://hut.edu.vn/ontology/sourcecode#javadocModel -->
 
-    <owl:DatatypeProperty rdf:about="&sourcecode;javadocTopic">
+    <owl:DatatypeProperty rdf:about="&sourcecode;javadocModel">
         <rdfs:domain rdf:resource="&sourcecode;Comment"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
 
-    <!-- http://hut.edu.vn/ontology/sourcecode#javadocModel -->
+    <!-- http://hut.edu.vn/ontology/sourcecode#javadocTopic -->
 
-    <owl:DatatypeProperty rdf:about="&sourcecode;javadocModel">
+    <owl:DatatypeProperty rdf:about="&sourcecode;javadocTopic">
         <rdfs:domain rdf:resource="&sourcecode;Comment"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -2188,7 +2188,23 @@ gnature can throw an exception</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#Topic"/>
     </owl:Class>
 
+    <!-- http://hut.edu.vn/ontology/document#TestCaseTopic -->
 
+    <owl:Class rdf:about="#TestCaseTopic">
+        <rdfs:subClassOf rdf:resource="#Topic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ArchitectTopic -->
+
+    <owl:Class rdf:about="#ArchitectTopic">
+        <rdfs:subClassOf rdf:resource="#Topic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#FrameworkTopic -->
+
+    <owl:Class rdf:about="#FrameworkTopic">
+        <rdfs:subClassOf rdf:resource="#Topic"/>
+    </owl:Class>
 
     <!-- http://hut.edu.vn/ontology/document#Annotation -->
 
@@ -2215,7 +2231,329 @@ gnature can throw an exception</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#AlgorithmTopic"/>
     </owl:Class>
 
+    <!-- http://hut.edu.vn/ontology/document#UserInterfaceTopic -->
 
+    <owl:Class rdf:about="#UserInterfaceTopic">
+        <rdfs:subClassOf rdf:resource="#TestCaseTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#FunctionalityTopic -->
+
+    <owl:Class rdf:about="#FunctionalityTopic">
+        <rdfs:subClassOf rdf:resource="#TestCaseTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#PerformanceTopic -->
+
+    <owl:Class rdf:about="#PerformanceTopic">
+        <rdfs:subClassOf rdf:resource="#TestCaseTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#IntegrationTopic -->
+
+    <owl:Class rdf:about="#IntegrationTopic">
+        <rdfs:subClassOf rdf:resource="#TestCaseTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#UsabilityTopic -->
+
+    <owl:Class rdf:about="#UsabilityTopic">
+        <rdfs:subClassOf rdf:resource="#TestCaseTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#DatabaseTopic -->
+
+    <owl:Class rdf:about="#DatabaseTopic">
+        <rdfs:subClassOf rdf:resource="#TestCaseTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#SecurityTopic -->
+
+    <owl:Class rdf:about="#SecurityTopic">
+        <rdfs:subClassOf rdf:resource="#TestCaseTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#UserAcceptanceTopic -->
+
+    <owl:Class rdf:about="#UserAcceptanceTopic">
+        <rdfs:subClassOf rdf:resource="#TestCaseTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#SolutionTopic -->
+
+    <owl:Class rdf:about="#SolutionTopic">
+        <rdfs:subClassOf rdf:resource="#ArchitectTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ApplicationTopic -->
+
+    <owl:Class rdf:about="#ApplicationTopic">
+        <rdfs:subClassOf rdf:resource="#ArchitectTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#DatabaseTopic -->
+
+    <owl:Class rdf:about="#DatabaseTopic">
+        <rdfs:subClassOf rdf:resource="#ArchitectTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#PerformanceTopic -->
+
+    <owl:Class rdf:about="#PerformanceTopic">
+        <rdfs:subClassOf rdf:resource="#ArchitectTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#SecurityTopic -->
+
+    <owl:Class rdf:about="#SecurityTopic">
+        <rdfs:subClassOf rdf:resource="#ArchitectTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#SpringMVCTopic -->
+
+    <owl:Class rdf:about="#SpringMVCTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#StrutsTopic -->
+
+    <owl:Class rdf:about="#StrutsTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ApacheAxisTopic -->
+
+    <owl:Class rdf:about="#ApacheAxisTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ApacheXercesTopic -->
+
+    <owl:Class rdf:about="#ApacheXercesTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#HibernateTopic -->
+
+    <owl:Class rdf:about="#HibernateTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#JDOMTopic -->
+
+    <owl:Class rdf:about="#JDOMTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#JavaAppletTopic -->
+
+    <owl:Class rdf:about="#JavaAppletTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ApacheVelocityTopic -->
+
+    <owl:Class rdf:about="#ApacheVelocityTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ApacheOROTopic -->
+
+    <owl:Class rdf:about="#ApacheOROTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#JAX-WSTopic -->
+
+    <owl:Class rdf:about="#JAX-WSTopic">
+        <rdfs:subClassOf rdf:resource="#FrameworkTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#DesignPatternTopic -->
+
+    <owl:Class rdf:about="#DesignPatternTopic">
+        <rdfs:subClassOf rdf:resource="#ApplicationTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#CreationalPatternTopic -->
+
+    <owl:Class rdf:about="#CreationalPatternTopic">
+        <rdfs:subClassOf rdf:resource="#DesignPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#StructuralPatternTopic -->
+
+    <owl:Class rdf:about="#StructuralPatternTopic">
+        <rdfs:subClassOf rdf:resource="#DesignPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#BehavioralPatternTopic -->
+
+    <owl:Class rdf:about="#BehavioralPatternTopic">
+        <rdfs:subClassOf rdf:resource="#DesignPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#J2EEPatternTopic -->
+
+    <owl:Class rdf:about="#J2EEPatternTopic">
+        <rdfs:subClassOf rdf:resource="#DesignPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#AbstractFactoryTopic -->
+
+    <owl:Class rdf:about="#AbstractFactoryTopic">
+        <rdfs:subClassOf rdf:resource="#CreationalPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#BuilderTopic -->
+
+    <owl:Class rdf:about="#BuilderTopic">
+        <rdfs:subClassOf rdf:resource="#CreationalPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#FactoryMethodTopic -->
+
+    <owl:Class rdf:about="#FactoryMethodTopic">
+        <rdfs:subClassOf rdf:resource="#CreationalPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ObjectPoolTopic -->
+
+    <owl:Class rdf:about="#ObjectPoolTopic">
+        <rdfs:subClassOf rdf:resource="#CreationalPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#PrototypeTopic -->
+
+    <owl:Class rdf:about="#PrototypeTopic">
+        <rdfs:subClassOf rdf:resource="#CreationalPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#SingletonTopic -->
+
+    <owl:Class rdf:about="#SingletonTopic">
+        <rdfs:subClassOf rdf:resource="#CreationalPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#AdapterTopic -->
+
+    <owl:Class rdf:about="#AdapterTopic">
+        <rdfs:subClassOf rdf:resource="#StructuralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#BridgeTopic -->
+
+    <owl:Class rdf:about="#BridgeTopic">
+        <rdfs:subClassOf rdf:resource="#StructuralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#CompositeTopic -->
+
+    <owl:Class rdf:about="#CompositeTopic">
+        <rdfs:subClassOf rdf:resource="#StructuralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#DecoratorTopic -->
+
+    <owl:Class rdf:about="#DecoratorTopic">
+        <rdfs:subClassOf rdf:resource="#StructuralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#FacadeTopic -->
+
+    <owl:Class rdf:about="#FacadeTopic">
+        <rdfs:subClassOf rdf:resource="#StructuralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#FlyweightTopic -->
+
+    <owl:Class rdf:about="#FlyweightTopic">
+        <rdfs:subClassOf rdf:resource="#StructuralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#PrivateClassDataTopic -->
+
+    <owl:Class rdf:about="#PrivateClassDataTopic">
+        <rdfs:subClassOf rdf:resource="#StructuralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ProxyTopic -->
+
+    <owl:Class rdf:about="#ProxyTopic">
+        <rdfs:subClassOf rdf:resource="#StructuralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ChainofresponsibilityTopic -->
+
+    <owl:Class rdf:about="#ChainofresponsibilityTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#CommandTopic -->
+
+    <owl:Class rdf:about="#CommandTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#InterpreterTopic -->
+
+    <owl:Class rdf:about="#InterpreterTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#MediatorTopic -->
+
+    <owl:Class rdf:about="#MediatorTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#MementoTopic -->
+
+    <owl:Class rdf:about="#MementoTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#NullObjectTopic -->
+
+    <owl:Class rdf:about="#NullObjectTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#ObserverTopic -->
+
+    <owl:Class rdf:about="#ObserverTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#StateTopic -->
+
+    <owl:Class rdf:about="#StateTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#StrategyTopic -->
+
+    <owl:Class rdf:about="#StrategyTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#TemplateMethodTopic -->
+
+    <owl:Class rdf:about="#TemplateMethodTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#VisitorTopic -->
+
+    <owl:Class rdf:about="#VisitorTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
+
+    <!-- http://hut.edu.vn/ontology/document#IteratorTopic -->
+
+    <owl:Class rdf:about="#IteratorTopic">
+        <rdfs:subClassOf rdf:resource="#BehavioralPatternTopic"/>
+    </owl:Class>
 
     <!-- http://hut.edu.vn/ontology/document#Book -->
 
@@ -2278,9 +2616,9 @@ gnature can throw an exception</rdfs:comment>
 
 
 
-    <!-- http://hut.edu.vn/ontology/document#DataBaseTopic -->
+    <!-- http://hut.edu.vn/ontology/document#DatabaseTopic -->
 
-    <owl:Class rdf:about="#DataBaseTopic">
+    <owl:Class rdf:about="#DatabaseTopic">
         <rdfs:subClassOf rdf:resource="#SystemDevelopmentTopic"/>
     </owl:Class>
 
@@ -3209,13 +3547,221 @@ gnature can throw an exception</rdfs:comment>
 
     <AlgorithmTopic rdf:about="#AlgorithmTopic_Instance"/>
 
+    <!-- http://hut.edu.vn/ontology/document#TestCaseTopic_Instance -->
 
+    <TestCaseTopic rdf:about="#TestCaseTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#FunctionalityTopic_Instance -->
+
+    <FunctionalityTopic rdf:about="#FunctionalityTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#UserInterfaceTopic_Instance -->
+
+    <UserInterfaceTopic rdf:about="#UserInterfaceTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#PerformanceTopic_Instance -->
+
+    <PerformanceTopic rdf:about="#PerformanceTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#IntegrationTopic_Instance -->
+
+    <IntegrationTopic rdf:about="#IntegrationTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#UsabilityTopic_Instance -->
+
+    <UsabilityTopic rdf:about="#UsabilityTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#SecurityTopic_Instance -->
+
+    <SecurityTopic rdf:about="#SecurityTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#UserAcceptanceTopic_Instance -->
+
+    <UserAcceptanceTopic rdf:about="#UserAcceptanceTopic_Instance"/>
 
     <!-- http://hut.edu.vn/ontology/document#ArrangeTopic_Instance -->
 
     <ArrangeTopic rdf:about="#ArrangeTopic_Instance"/>
 
+   <!-- http://hut.edu.vn/ontology/document#ArchitectTopic_Instance -->
 
+    <ArchitectTopic rdf:about="#ArchitectTopic_Instance"/>
+
+   <!-- http://hut.edu.vn/ontology/document#SolutionTopic_Instance -->
+
+    <SolutionTopic rdf:about="#SolutionTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#ApplicationTopic_Instance -->
+
+    <ApplicationTopic rdf:about="#ApplicationTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#FrameworkTopic_Instance -->
+
+    <FrameworkTopic rdf:about="#FrameworkTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#SpringMVCTopic_Instance -->
+
+    <SpringMVCTopic rdf:about="#SpringMVCTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#StrutsTopic_Instance -->
+
+    <StrutsTopic rdf:about="#StrutsTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#ApacheAxisTopic_Instance -->
+
+    <ApacheAxisTopic rdf:about="#ApacheAxisTopic_Instance"/>
+
+   <!-- http://hut.edu.vn/ontology/document#ApacheXercesTopic_Instance -->
+
+    <ApacheXercesTopic rdf:about="#ApacheXercesTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#HibernateTopic_Instance -->
+
+    <HibernateTopic rdf:about="#HibernateTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#JDOMTopic_Instance -->
+
+    <JDOMTopic rdf:about="#JDOMTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#JavaAppletTopic_Instance -->
+
+    <JavaAppletTopic rdf:about="#JavaAppletTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#ApacheVelocityTopic_Instance -->
+
+    <ApacheVelocityTopic rdf:about="#ApacheVelocityTopic_Instance"/>
+
+     <!-- http://hut.edu.vn/ontology/document#ApacheOROTopic_Instance -->
+
+    <ApacheOROTopic rdf:about="#ApacheOROTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#JAX-WSTopic_Instance -->
+
+    <JAX-WSTopic rdf:about="#JAX-WSTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#DesignPatternTopic_Instance -->
+
+    <DesignPatternTopic rdf:about="#DesignPatternTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#CreationalPatternTopic_Instance -->
+
+    <CreationalPatternTopic rdf:about="#CreationalPatternTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#StructuralPatternTopic_Instance -->
+
+    <StructuralPatternTopic rdf:about="#StructuralPatternTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#BehavioralPatternTopic_Instance -->
+
+    <BehavioralPatternTopic rdf:about="#BehavioralPatternTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#J2EEPatternTopic_Instance -->
+
+    <J2EEPatternTopic rdf:about="#J2EEPatternTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#AbstractFactoryTopic_Instance -->
+
+    <AbstractFactoryTopic rdf:about="#AbstractFactoryTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#BuilderTopic_Instance -->
+
+    <BuilderTopic rdf:about="#BuilderTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#FactoryMethodTopic_Instance -->
+
+    <FactoryMethodTopic rdf:about="#FactoryMethodTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#ObjectPoolTopic_Instance -->
+
+    <ObjectPoolTopic rdf:about="#ObjectPoolTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#PrototypeTopic_Instance -->
+
+    <PrototypeTopic rdf:about="#PrototypeTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#SingletonTopic_Instance -->
+
+    <SingletonTopic rdf:about="#SingletonTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#AdapterTopic_Instance -->
+
+    <AdapterTopic rdf:about="#AdapterTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#BridgeTopic_Instance -->
+
+    <BridgeTopic rdf:about="#BridgeTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#CompositeTopic_Instance -->
+
+    <CompositeTopic rdf:about="#CompositeTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#DecoratorTopic_Instance -->
+
+    <DecoratorTopic rdf:about="#DecoratorTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#FacadeTopic_Instance -->
+
+    <FacadeTopic rdf:about="#FacadeTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#FlyweightTopic_Instance -->
+
+    <FlyweightTopic rdf:about="#FlyweightTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#PrivateClassDataTopic_Instance -->
+
+    <PrivateClassDataTopic rdf:about="#PrivateClassDataTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#ProxyTopic_Instance -->
+
+    <ProxyTopic rdf:about="#ProxyTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#ChainofresponsibilityTopic_Instance -->
+
+    <ChainofresponsibilityTopic rdf:about="#ChainofresponsibilityTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#CommandTopic_Instance -->
+
+    <CommandTopic rdf:about="#CommandTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#InterpreterTopic_Instance -->
+
+    <InterpreterTopic rdf:about="#InterpreterTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#IteratorTopic_Instance -->
+
+    <IteratorTopic rdf:about="#IteratorTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#MediatorTopic_Instance -->
+
+    <MediatorTopic rdf:about="#MediatorTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#MementoTopic_Instance -->
+
+    <MementoTopic rdf:about="#MementoTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#NullObjectTopic_Instance -->
+
+    <NullObjectTopic rdf:about="#NullObjectTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#ObserverTopic_Instance -->
+
+    <ObserverTopic rdf:about="#ObserverTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#StateTopic_Instance -->
+
+    <StateTopic rdf:about="#StateTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#StrategyTopic_Instance -->
+
+    <StrategyTopic rdf:about="#StrategyTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#TemplateMethodTopic_Instance -->
+
+    <TemplateMethodTopic rdf:about="#TemplateMethodTopic_Instance"/>
+
+    <!-- http://hut.edu.vn/ontology/document#VisitorTopic_Instance -->
+
+    <VisitorTopic rdf:about="#VisitorTopic_Instance"/>
 
     <!-- http://hut.edu.vn/ontology/document#CSharpTopic_Instance -->
 
@@ -3223,9 +3769,9 @@ gnature can throw an exception</rdfs:comment>
 
 
 
-    <!-- http://hut.edu.vn/ontology/document#DataBaseTopic_Instance -->
+    <!-- http://hut.edu.vn/ontology/document#DatabaseTopic_Instance -->
 
-    <DataBaseTopic rdf:about="#DataBaseTopic_Instance"/>
+    <DatabaseTopic rdf:about="#DatabaseTopic_Instance"/>
 
 
 
