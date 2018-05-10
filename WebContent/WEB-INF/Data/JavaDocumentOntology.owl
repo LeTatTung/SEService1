@@ -799,24 +799,7 @@
         </rdfs:domain>
     </owl:ObjectProperty>
 
-    <!-- http://hut.edu.vn/ontology/sourcecode#hasSemanticComment -->
 
-    <owl:ObjectProperty rdf:about="&sourcecode;hasSemanticComment">
-        <rdfs:label>hasSemanticComment</rdfs:label>
-        <rdfs:range rdf:resource="&sourcecode;SemanticComment"/>
-        <owl:inverseOf rdf:resource="&sourcecode;semanticCommentOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&sourcecode;Class"/>
-                    <rdf:Description rdf:about="&sourcecode;Constructor"/>
-                    <rdf:Description rdf:about="&sourcecode;Interface"/>
-                    <rdf:Description rdf:about="&sourcecode;Method"/>
-                    <rdf:Description rdf:about="&sourcecode;MethodSignature"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:ObjectProperty>
 
     <!-- http://hut.edu.vn/ontology/sourcecode#hasConstructor -->
 
@@ -1943,32 +1926,24 @@ gnature can throw an exception</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
 
+    <!-- http://hut.edu.vn/ontology/sourcecode#javadocTopic -->
 
-    <!-- http://hut.edu.vn/ontology/sourcecode#semanticdocAuthor -->
-
-    <owl:DatatypeProperty rdf:about="&sourcecode;semanticdocAuthor">
-        <rdfs:domain rdf:resource="&sourcecode;SemanticComment"/>
+    <owl:DatatypeProperty rdf:about="&sourcecode;javadocTopic">
+        <rdfs:domain rdf:resource="&sourcecode;Comment"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
 
-    <!-- http://hut.edu.vn/ontology/sourcecode#semanticdocTopic -->
+    <!-- http://hut.edu.vn/ontology/sourcecode#javadocModel -->
 
-    <owl:DatatypeProperty rdf:about="&sourcecode;semanticdocTopic">
-        <rdfs:domain rdf:resource="&sourcecode;SemanticComment"/>
+    <owl:DatatypeProperty rdf:about="&sourcecode;javadocModel">
+        <rdfs:domain rdf:resource="&sourcecode;Comment"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
 
-    <!-- http://hut.edu.vn/ontology/sourcecode#semanticdocModel -->
+    <!-- http://hut.edu.vn/ontology/sourcecode#javadocFunction -->
 
-    <owl:DatatypeProperty rdf:about="&sourcecode;semanticdocModel">
-        <rdfs:domain rdf:resource="&sourcecode;SemanticComment"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://hut.edu.vn/ontology/sourcecode#semanticdocFunction -->
-
-    <owl:DatatypeProperty rdf:about="&sourcecode;semanticdocFunction">
-        <rdfs:domain rdf:resource="&sourcecode;SemanticComment"/>
+    <owl:DatatypeProperty rdf:about="&sourcecode;javadocFunction">
+        <rdfs:domain rdf:resource="&sourcecode;Comment"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
 
