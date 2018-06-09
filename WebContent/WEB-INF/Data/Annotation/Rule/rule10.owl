@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY swrl  "http://www.w3.org/2003/11/swrl#" >
+  <!ENTITY rule10 "http://www.hut.edu.vn/ontology/rule10#" >
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+  <!ENTITY sourcecode "http://hut.edu.vn/ontology/sourcecode#" >
+  <!ENTITY document "http://hut.edu.vn/ontology/document#" >
+  <!ENTITY ruleml  "http://www.w3.org/2003/11/ruleml#" >
+]>
+<rdf:RDF xml:base="http://www.hut.edu.vn/ontology/rule10#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:ruleml="http://www.w3.org/2003/11/ruleml#">
+
+
+
+
+  <swrl:Variable rdf:about="#class"/>
+  <swrl:Variable rdf:about="#method"/>
+  <swrl:Variable rdf:about="#topic"/>
+  <swrl:Variable rdf:about="#semanticComment"/>
+
+  <!-- Neu semanticComment co topic la topic, Class chua no cung co topic la topic-->
+  <swrl:Imp rdf:about="#topicSemanticCommentInfer">
+    <swrl:head rdf:parseType="Collection">
+      <swrl:IndividualPropertyAtom>
+        <swrl:propertyPredicate rdf:resource="http://hut.edu.vn/ontology/document#hasTopic"/>
+        <swrl:argument1 rdf:resource="#class"/>
+        <swrl:argument2 rdf:resource="#topic"/>
+      </swrl:IndividualPropertyAtom>
+    </swrl:head>
+
+    <swrl:body rdf:parseType="Collection">
+      <swrl:ClassAtom>
+        <swrl:classPredicate rdf:resource="http://hut.edu.vn/ontology/sourcecode#SemanticComment"/>
+        <swrl:argument1 rdf:resource="#semanticComment"/>
+      </swrl:ClassAtom>
+      <swrl:ClassAtom>
+        <swrl:classPredicate rdf:resource="http://hut.edu.vn/ontology/document#Topic"/>
+        <swrl:argument1 rdf:resource="#topic"/>
+      </swrl:ClassAtom>
+      <swrl:ClassAtom>
+        <swrl:classPredicate rdf:resource="http://hut.edu.vn/ontology/sourcecode#Class"/>
+        <swrl:argument1 rdf:resource="#class"/>
+      </swrl:ClassAtom>
+
+      <swrl:IndividualPropertyAtom>
+        <swrl:propertyPredicate rdf:resource="http://hut.edu.vn/ontology/sourcecode#hasSemanticComment"/>
+        <swrl:argument1 rdf:resource="#class"/>
+        <swrl:argument2 rdf:resource="#semanticComment"/>
+      </swrl:IndividualPropertyAtom>
+
+      <swrl:IndividualPropertyAtom>
+        <swrl:propertyPredicate rdf:resource="http://hut.edu.vn/ontology/document#hasTopic"/>
+        <swrl:argument1 rdf:resource="#semanticComment"/>
+        <swrl:argument2 rdf:resource="#topic"/>
+      </swrl:IndividualPropertyAtom>
+    </swrl:body>
+  </swrl:Imp>
+
+  <!-- Neu semanticComment co topic la topic, Method chua no cung co topic la topic-->
+  <swrl:Imp rdf:about="#topicSemanticCommentInfer">
+    <swrl:head rdf:parseType="Collection">
+      <swrl:IndividualPropertyAtom>
+        <swrl:propertyPredicate rdf:resource="http://hut.edu.vn/ontology/document#hasTopic"/>
+        <swrl:argument1 rdf:resource="#method"/>
+        <swrl:argument2 rdf:resource="#topic"/>
+      </swrl:IndividualPropertyAtom>
+    </swrl:head>
+
+    <swrl:body rdf:parseType="Collection">
+      <swrl:ClassAtom>
+        <swrl:classPredicate rdf:resource="http://hut.edu.vn/ontology/sourcecode#SemanticComment"/>
+        <swrl:argument1 rdf:resource="#semanticComment"/>
+      </swrl:ClassAtom>
+      <swrl:ClassAtom>
+        <swrl:classPredicate rdf:resource="http://hut.edu.vn/ontology/document#Topic"/>
+        <swrl:argument1 rdf:resource="#topic"/>
+      </swrl:ClassAtom>
+      <swrl:ClassAtom>
+        <swrl:classPredicate rdf:resource="http://hut.edu.vn/ontology/sourcecode#Method"/>
+        <swrl:argument1 rdf:resource="#method"/>
+      </swrl:ClassAtom>
+
+      <swrl:IndividualPropertyAtom>
+        <swrl:propertyPredicate rdf:resource="http://hut.edu.vn/ontology/sourcecode#hasSemanticComment"/>
+        <swrl:argument1 rdf:resource="#method"/>
+        <swrl:argument2 rdf:resource="#semanticComment"/>
+      </swrl:IndividualPropertyAtom>
+
+      <swrl:IndividualPropertyAtom>
+        <swrl:propertyPredicate rdf:resource="http://hut.edu.vn/ontology/document#hasTopic"/>
+        <swrl:argument1 rdf:resource="#semanticComment"/>
+        <swrl:argument2 rdf:resource="#topic"/>
+      </swrl:IndividualPropertyAtom>
+    </swrl:body>
+  </swrl:Imp>
+</rdf:RDF>
